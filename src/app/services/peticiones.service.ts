@@ -16,8 +16,8 @@ export class PeticionesService{
 
     }
 
-    getUser():Observable<any>{
-        return this._http.get(this.url+'api/users/2');
+    getUser(userID:number):Observable<any>{
+        return this._http.get(this.url+'api/users/'+userID);
     }
 
 

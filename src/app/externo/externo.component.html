@@ -1,16 +1,29 @@
 <p>externo works!</p>
 
 <div>
+    <div *ngIf="!respuesta">
+        <h3>Cargando...</h3>
+    </div>
     <table>
+        <tr>
+            <td>ID Usuario</td>
+            <td><input type="text" [(ngModel)]="userID" (keyup.enter)="cargaUsuario()"></td>
+        </tr>
         <tr>
             <th>
                 Nombre
+            </th>
+            <th>
+                Avatar
             </th>
         </tr>
 
         <tr>
             <td>{{first_name}}</td>
+            <td><img src="{{avatar}}" alt=""></td>
         </tr>
 
     </table>
+
+
 </div>
